@@ -61,10 +61,20 @@
 <p>If this policy changes, the "Last updated" date above will change and the new version will be posted at this same URL.</p>
 
 <h2>Contact</h2>
-<p>Questions about this policy: <a href="mailto:mitesteam5@gmail.com">mitesteam5@gmail.com</a></p>
+<p>Questions about this policy: <a id="contact-link" href="#"></a></p>
 
 <footer>&copy; <span id="year">2026</span> HolyPass by Anurag</footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+(function () {
+  var user = ['anurag', 'holypass'].join('.');
+  var domain = ['gmail', 'com'].join('.');
+  var email = user + '@' + domain;
+  var link = document.getElementById('contact-link');
+  link.href = 'mailto:' + email;
+  link.textContent = email;
+})();
+</script>
 </main>
 </body>
 </html>
